@@ -26,7 +26,7 @@ class TeamworkTeamInviteTraitTest  extends Orchestra\Testbench\TestCase
         $app['config']->set('teamwork.user_model', 'User');
 
         \Schema::create('users', function ($table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->string('email');
             $table->timestamps();

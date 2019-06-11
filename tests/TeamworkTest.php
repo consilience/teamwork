@@ -23,7 +23,7 @@ class TeamworkTest extends Orchestra\Testbench\TestCase
         $app['config']->set('teamwork.user_model', 'User');
 
         \Schema::create('users', function ($table) {
-            $table->increments('id');
+            $table->bitIncrements('id');
             $table->string('name');
             $table->timestamps();
             $table->softDeletes();

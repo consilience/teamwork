@@ -20,16 +20,16 @@ class UsedByTeamsTraitTest extends Orchestra\Testbench\TestCase
         $app['config']->set('teamwork.user_model', 'User');
 
         \Schema::create('users', function ($table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
             $table->timestamps();
             $table->softDeletes();
         });
 
         \Schema::create('tasks', function ($table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('team_id');
+            $table->bigInteger('team_id');
             $table->timestamps();
         });
     }
